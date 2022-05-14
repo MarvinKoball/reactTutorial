@@ -1,9 +1,9 @@
-
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div>
-      <h1>Hello world</h1>
+    <div className="max-w-xl m-auto bg-gray-200 mt-20">
+      <TodoList />
     </div>
   );
 }
