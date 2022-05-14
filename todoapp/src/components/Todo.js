@@ -1,13 +1,24 @@
 import React from 'react'
 
-function Todo({description , done}){
+
+const Todo=({description , done, onChangeTodo, index})=>{
+
+
   return (
-    <div>
-        <h1>{description}</h1>
-        
+      <div>
+      <div className={
+          done  ? "flex justify-between item-center p-2 bg-green-600 text-white"
+                : "flex justify-between item-center p-2 bg-red-500 text-white"
+      }>
+          <h1 className="text-lg cursor-pointer" 
+          onClick={()=>{
+              onChangeTodo(index);
+          }}>{description}</h1>
+        <button className ="text-lg bg-gray-400 p-2 text-white">Löschen</button>
+      </div>
         
     </div>
   )
-}
+    }
 
-export default Todo
+export default Todo;
