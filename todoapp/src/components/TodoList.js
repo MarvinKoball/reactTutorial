@@ -12,7 +12,7 @@ const TodoList = () => {
         return parsed || [];
     } 
     );
-    const [textinput, settextinput] =  useState("")
+    const [textinput, settextinput] =  useState("");
 
     const changeText = (e) =>{
         settextinput(e.target.value);
